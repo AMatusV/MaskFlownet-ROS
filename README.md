@@ -39,4 +39,4 @@ where `CONFIG` specifies the network configuration (`MaskFlownet_S.yaml` or `Mas
 
 For example,
 
-- to do prediction with *MaskFlownet* on checkpoint `000Mar17`, run `python mfn_node.py MaskFlownet.yaml -g 0 -c 000Mar17` (the output will be under `/flow_topic`).
+- to do prediction with *MaskFlownet* on checkpoint `000Mar17`, run `python mfn_node.py MaskFlownet.yaml -g 0 -c 000Mar17` (the output will be under `/flow`).
