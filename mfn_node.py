@@ -60,8 +60,8 @@ class maskflownet:
 		sys.stdout.flush()
 
 		# ROS topics
-		self.cameraTopic = "usb_cam/image_raw"	
-		self.flowTopic = "flow_topic"
+		self.cameraTopic = "bebop/image_raw"	
+		self.flowTopic = "flow"
 		self.camera_sub = rospy.Subscriber(self.cameraTopic, Image, self.camera_cb)
 		self.flow_pub = rospy.Publisher(self.flowTopic, Image, queue_size=1)
 		self.image_msg = Image()
@@ -124,7 +124,7 @@ def main(argv):
 	try:
 		mfn.node()
 	except KeyboardInterrupt:
-		print("Shutting down")
+		print("[MFN] Shutting down")
 
 if __name__ == '__main__':
 	main(sys.argv)	
